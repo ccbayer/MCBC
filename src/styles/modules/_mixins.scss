@@ -1,0 +1,35 @@
+
+/**
+ * modules/mixins
+ * ---
+ */
+
+
+@mixin reset-box {
+  padding: 0;
+  margin: 0;
+}
+
+
+@mixin max-screen($max) {
+  @include mq($max-width: $max) {
+    @content;
+  }
+}
+
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+// calculate em given a px font size
+@mixin font-size($font-size, $line-height: 1, $context: $font-size-base) {
+	// by default we define font size in ems based on base font size (16px)
+	// but we can override by passing through context font size, which works well for nested elements
+	font-size: strip-unit($font-size) / strip-unit($context) * 1em;
+	line-height: $line-height;
+}

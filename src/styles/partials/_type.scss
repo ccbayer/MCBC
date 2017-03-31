@@ -1,0 +1,206 @@
+.arvo {
+	font-family: 'Arvo', serif;
+}
+
+.raleway {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	strong {
+		font-weight: 700;
+	}
+	&.strong,
+	&.bold {
+		font-weight: 700;
+	}
+}
+
+strong.raleway,
+bold.raleway {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+}
+
+h1,
+h2 {
+	font-family: 'Arvo', serif;
+	font-weight: normal;
+	line-height: 1.5em;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+	&.lower {
+		text-transform: lowercase;
+	}
+	small {
+		font-family: 'Raleway', sans-serif;
+		font-weight: 700;
+	}
+	a {
+		font-family: 'Arvo', serif;
+	}
+}
+
+
+h3 {
+	text-transform: uppercase;
+	font-family: 'Arvo', serif;
+	a {
+		font-family: 'Arvo', serif;
+	}
+}
+
+.page-content {
+	h3 {
+		color: $celeste;
+		@include font-size(22px);
+		letter-spacing: .05em;
+		text-align: center;
+	}
+}
+
+.slider-heading {
+	h1 {
+		font-family: 'Raleway', sans-serif;
+		font-size: 75px;
+		line-height: 1;
+		letter-spacing: -0.02em;
+		font-weight: 700;
+		small {
+			display: block;
+			font-size: .5em;
+			font-weight: 700;
+			letter-spacing: normal;
+		}	
+			@include max-screen($screen-sm) {
+			@include font-size(36px);
+		}
+	}
+}
+
+.slider-body p {
+	@include font-size(24px, 28px);
+	font-family: 'Arvo', serif;
+	@include max-screen($screen-xs) { 
+		@include font-size(20px, 24px);
+	}
+}
+
+.introduction {
+	text-transform: uppercase;
+	padding: 80px 0 130px 0;
+	text-align: center;
+	h1 {
+		letter-spacing: .25em;
+		margin: 0
+	}
+	p {
+		text-align: center;
+		font-weight: 700;
+		font-size: 30px;
+		line-height: 38px;
+		letter-spacing: .25em;
+	}
+	hr {
+		width: 22px;
+		margin: 47px auto;
+	}
+	@include max-screen($screen-xs) {
+		padding: 47px 0 47px 0;
+		margin-bottom: 47px;
+		h1 {
+			@include font-size(24px, 30px);
+			margin: 0;
+		}
+		p {
+			@include font-size(20px, 25px);
+			padding: 0 15px;
+			margin: 0;
+		}
+	}
+}
+
+body, 
+a,
+p {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+}
+
+body p {
+	@include font-size(15px, 18px);
+	@include max-screen($screen-sm) {
+		@include font-size(18px, 24px);
+	}
+}
+
+// MODULES
+.three-up {
+	h2 {
+	}
+}
+
+// Rollover Module
+.panel-module { 
+	h2 {
+		line-height: 1.5em;
+		small {
+			line-height: 2em;
+		}
+	}
+	p {
+		line-height: 1.5em;
+	}
+}
+
+// icons fonts
+@charset "UTF-8";
+
+@font-face {
+  font-family: "mcbc";
+  src:url("fonts/mcbc.eot");
+  src:url("fonts/mcbc.eot?#iefix") format("embedded-opentype"),
+    url("fonts/mcbc.woff") format("woff"),
+    url("fonts/mcbc.ttf") format("truetype"),
+    url("fonts/mcbc.svg#mcbc") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "mcbc" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "mcbc" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook-circled:before {
+  content: "\61";
+}
+.icon-twitter-circled:before {
+  content: "\62";
+}
+.icon-pinterest-circled:before {
+  content: "\63";
+}
+.icon-instagram-circle:before {
+  content: "\64";
+}

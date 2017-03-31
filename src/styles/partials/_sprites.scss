@@ -1,0 +1,195 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$down-arrows-black-name: 'down-arrows-black';
+$down-arrows-black-x: 118px;
+$down-arrows-black-y: 0px;
+$down-arrows-black-offset-x: -118px;
+$down-arrows-black-offset-y: 0px;
+$down-arrows-black-width: 50px;
+$down-arrows-black-height: 29px;
+$down-arrows-black-total-width: 168px;
+$down-arrows-black-total-height: 118px;
+$down-arrows-black-image: './images/sprite.png';
+$down-arrows-black: (118px, 0px, -118px, 0px, 50px, 29px, 168px, 118px, './images/sprite.png', 'down-arrows-black', );
+$down-arrows-celeste-name: 'down-arrows-celeste';
+$down-arrows-celeste-x: 118px;
+$down-arrows-celeste-y: 29px;
+$down-arrows-celeste-offset-x: -118px;
+$down-arrows-celeste-offset-y: -29px;
+$down-arrows-celeste-width: 50px;
+$down-arrows-celeste-height: 29px;
+$down-arrows-celeste-total-width: 168px;
+$down-arrows-celeste-total-height: 118px;
+$down-arrows-celeste-image: './images/sprite.png';
+$down-arrows-celeste: (118px, 29px, -118px, -29px, 50px, 29px, 168px, 118px, './images/sprite.png', 'down-arrows-celeste', );
+$ftr-icon-envelope-59x59-name: 'ftr-icon-envelope-59x59';
+$ftr-icon-envelope-59x59-x: 0px;
+$ftr-icon-envelope-59x59-y: 0px;
+$ftr-icon-envelope-59x59-offset-x: 0px;
+$ftr-icon-envelope-59x59-offset-y: 0px;
+$ftr-icon-envelope-59x59-width: 59px;
+$ftr-icon-envelope-59x59-height: 59px;
+$ftr-icon-envelope-59x59-total-width: 168px;
+$ftr-icon-envelope-59x59-total-height: 118px;
+$ftr-icon-envelope-59x59-image: './images/sprite.png';
+$ftr-icon-envelope-59x59: (0px, 0px, 0px, 0px, 59px, 59px, 168px, 118px, './images/sprite.png', 'ftr-icon-envelope-59x59', );
+$ftr-icon-home-59x59-name: 'ftr-icon-home-59x59';
+$ftr-icon-home-59x59-x: 59px;
+$ftr-icon-home-59x59-y: 0px;
+$ftr-icon-home-59x59-offset-x: -59px;
+$ftr-icon-home-59x59-offset-y: 0px;
+$ftr-icon-home-59x59-width: 59px;
+$ftr-icon-home-59x59-height: 59px;
+$ftr-icon-home-59x59-total-width: 168px;
+$ftr-icon-home-59x59-total-height: 118px;
+$ftr-icon-home-59x59-image: './images/sprite.png';
+$ftr-icon-home-59x59: (59px, 0px, -59px, 0px, 59px, 59px, 168px, 118px, './images/sprite.png', 'ftr-icon-home-59x59', );
+$ftr-icon-mailbox-59x59-name: 'ftr-icon-mailbox-59x59';
+$ftr-icon-mailbox-59x59-x: 0px;
+$ftr-icon-mailbox-59x59-y: 59px;
+$ftr-icon-mailbox-59x59-offset-x: 0px;
+$ftr-icon-mailbox-59x59-offset-y: -59px;
+$ftr-icon-mailbox-59x59-width: 59px;
+$ftr-icon-mailbox-59x59-height: 59px;
+$ftr-icon-mailbox-59x59-total-width: 168px;
+$ftr-icon-mailbox-59x59-total-height: 118px;
+$ftr-icon-mailbox-59x59-image: './images/sprite.png';
+$ftr-icon-mailbox-59x59: (0px, 59px, 0px, -59px, 59px, 59px, 168px, 118px, './images/sprite.png', 'ftr-icon-mailbox-59x59', );
+$ftr-icon-phone-59x59-name: 'ftr-icon-phone-59x59';
+$ftr-icon-phone-59x59-x: 59px;
+$ftr-icon-phone-59x59-y: 59px;
+$ftr-icon-phone-59x59-offset-x: -59px;
+$ftr-icon-phone-59x59-offset-y: -59px;
+$ftr-icon-phone-59x59-width: 59px;
+$ftr-icon-phone-59x59-height: 59px;
+$ftr-icon-phone-59x59-total-width: 168px;
+$ftr-icon-phone-59x59-total-height: 118px;
+$ftr-icon-phone-59x59-image: './images/sprite.png';
+$ftr-icon-phone-59x59: (59px, 59px, -59px, -59px, 59px, 59px, 168px, 118px, './images/sprite.png', 'ftr-icon-phone-59x59', );
+$nav-arrow-down-celeste-name: 'nav-arrow-down-celeste';
+$nav-arrow-down-celeste-x: 118px;
+$nav-arrow-down-celeste-y: 58px;
+$nav-arrow-down-celeste-offset-x: -118px;
+$nav-arrow-down-celeste-offset-y: -58px;
+$nav-arrow-down-celeste-width: 12px;
+$nav-arrow-down-celeste-height: 14px;
+$nav-arrow-down-celeste-total-width: 168px;
+$nav-arrow-down-celeste-total-height: 118px;
+$nav-arrow-down-celeste-image: './images/sprite.png';
+$nav-arrow-down-celeste: (118px, 58px, -118px, -58px, 12px, 14px, 168px, 118px, './images/sprite.png', 'nav-arrow-down-celeste', );
+$nav-arrow-down-name: 'nav-arrow-down';
+$nav-arrow-down-x: 130px;
+$nav-arrow-down-y: 58px;
+$nav-arrow-down-offset-x: -130px;
+$nav-arrow-down-offset-y: -58px;
+$nav-arrow-down-width: 12px;
+$nav-arrow-down-height: 14px;
+$nav-arrow-down-total-width: 168px;
+$nav-arrow-down-total-height: 118px;
+$nav-arrow-down-image: './images/sprite.png';
+$nav-arrow-down: (130px, 58px, -130px, -58px, 12px, 14px, 168px, 118px, './images/sprite.png', 'nav-arrow-down', );
+$nav-arrow-right-celeste-name: 'nav-arrow-right-celeste';
+$nav-arrow-right-celeste-x: 142px;
+$nav-arrow-right-celeste-y: 58px;
+$nav-arrow-right-celeste-offset-x: -142px;
+$nav-arrow-right-celeste-offset-y: -58px;
+$nav-arrow-right-celeste-width: 12px;
+$nav-arrow-right-celeste-height: 14px;
+$nav-arrow-right-celeste-total-width: 168px;
+$nav-arrow-right-celeste-total-height: 118px;
+$nav-arrow-right-celeste-image: './images/sprite.png';
+$nav-arrow-right-celeste: (142px, 58px, -142px, -58px, 12px, 14px, 168px, 118px, './images/sprite.png', 'nav-arrow-right-celeste', );
+$nav-arrow-right-name: 'nav-arrow-right';
+$nav-arrow-right-x: 154px;
+$nav-arrow-right-y: 58px;
+$nav-arrow-right-offset-x: -154px;
+$nav-arrow-right-offset-y: -58px;
+$nav-arrow-right-width: 12px;
+$nav-arrow-right-height: 14px;
+$nav-arrow-right-total-width: 168px;
+$nav-arrow-right-total-height: 118px;
+$nav-arrow-right-image: './images/sprite.png';
+$nav-arrow-right: (154px, 58px, -154px, -58px, 12px, 14px, 168px, 118px, './images/sprite.png', 'nav-arrow-right', );
+$spritesheet-width: 168px;
+$spritesheet-height: 118px;
+$spritesheet-image: './images/sprite.png';
+$spritesheet-sprites: ($down-arrows-black, $down-arrows-celeste, $ftr-icon-envelope-59x59, $ftr-icon-home-59x59, $ftr-icon-mailbox-59x59, $ftr-icon-phone-59x59, $nav-arrow-down-celeste, $nav-arrow-down, $nav-arrow-right-celeste, $nav-arrow-right, );
+$spritesheet: (168px, 118px, './images/sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

@@ -1,0 +1,181 @@
+.article-wrapper,
+.similar-articles {
+	article {
+		@include make-md-column(8);
+		@include make-md-column-offset(2);
+		.title {
+			text-align: center;
+			padding: 60px 0 0 0;
+			h1 {
+				text-transform: uppercase;
+				text-align: center;
+				color: $celeste;
+				small {
+					display: block;
+					color: $white;
+				}
+			}
+			@include max-screen($screen-sm) {
+				padding: 30px 0 0 0;
+			}
+		}
+		time {
+			text-transform: uppercase;
+			font-style: italic;
+			color: #686868;
+		}
+		.content {
+			padding: 50px 0;
+			&.page-content {
+				padding: 0 0 50px 0;
+				h3 {
+					padding-bottom: 25px;
+				}
+				.sponsor-info {
+					h3 {
+						padding-bottom: 0;
+					}
+				}
+			}
+		}
+		
+		.post-meta-footer {
+			border: {
+				top: 1px solid rgba($white, .2);
+				bottom: 1px solid rgba($white, .2);
+			}
+			margin: 10px 0;
+			padding: 10px 0;
+			.tags {
+				margin: 10px 0;
+			}
+		}
+		@include max-screen($screen-sm) {
+			.content,
+			.content.page-content {
+				padding: 0 25px;
+			}
+		}
+		// events
+		.tribe-events-content-wrapper {
+			padding: 0 0 40px 0;
+			.single-event {
+				padding: 20px 0;
+			}
+		}
+	}
+}
+
+
+.similar-articles-wrapper,
+.archive-wrapper {
+	@include max-screen($screen-sm) {
+		padding-bottom: 50px;
+	}
+	h1,
+	h2,
+	h3 {
+		text-transform: uppercase;
+		text-align: center;
+		color: $celeste;
+		small {
+			display: block;
+			color: white;
+		}
+		a {
+			color: $celeste;
+		}
+	}
+	article {
+		@include max-screen($screen-md) {
+			margin-bottom: 15px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+		h3 {
+			@include max-screen($screen-md) {
+				@include font-size(18px);
+			}
+		}
+		@include make-sm-column(4);
+		@include make-sm-column-offset(0);
+		margin-bottom: 15px;
+		text-align: center;
+		.post-meta {
+			text-align: center;
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+		time {
+			text-transform: uppercase;
+			font-style: italic;
+			color: $celeste;
+		}
+		.excerpt {
+			// hide on med
+			@include screen($screen-sm, $screen-md) {
+				display: none;
+			} 
+		}
+	}
+}
+.similar-articles-wrapper {
+	padding: 115px 0;
+	@include max-screen($screen-sm) {
+		padding: 30px 0;
+	}
+}
+
+.similar-articles {
+	padding: 80px 0;
+	@include max-screen($screen-md) {
+		padding: 30px 0;
+	}
+}
+
+.headline {
+	padding: 60px 0;
+	@include max-screen($screen-md) {
+		padding: 30px 0;
+	}
+}
+
+ul.term-link {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+	li {
+		text-align: center;
+		display: inline-block;
+		margin: 0 5px;
+	}	
+}
+
+// BIOS on contact page
+
+.page-content {
+	.well {
+		border-top: 1px solid $midgrey;
+		border-bottom: 1px solid $midgrey;
+		padding: 30px 0;
+		margin: 15px 0;
+		text-align: left;
+	}
+}
+
+.bike-pattern-placeholder {
+	width: 100%;
+	height: 249px;
+	@include max-screen($screen-md) {
+		height: 150px;
+	}
+	a {
+		width: 100%;
+		height: 100%;
+	}
+	
+}
+

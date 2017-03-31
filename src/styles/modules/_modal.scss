@@ -1,0 +1,87 @@
+.modal-content {
+	border-radius: 0;
+	background-color: $darkgrey;
+	text-align: center;
+	label {
+		text-align: center;
+		display: block;
+		width: 100%;
+		margin: 10px auto;
+	}
+	input {
+		display: block;
+		margin: 0 auto;
+	}
+	.sml_submit {
+		text-align: center;
+	}
+	h3 {
+		text-align: center;
+	}
+}
+
+.modal-header {
+	border-width: 0;
+}
+
+.sml_submitbtn {
+	background-color: transparent;
+	border-radius: 0;
+	color: $white;
+	margin: 15px 0;
+	text-align: center !important;
+	font-weight: 700;
+	letter-spacing: .2em;
+	display: inline-block;
+	padding: 10px 15px;
+	@include font-size(34px);
+	text: {
+		transform: uppercase;
+		align: center;
+		decoration: none;
+	}
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+	border: {
+		width: 4px;
+		style: solid;
+		color: $white;
+	}
+	transition: all .5s ease-in-out;
+	&:hover {
+		background-color: $white;
+		color: $black;			
+	}
+}
+
+
+
+#search-modal {
+	top: 25%;
+	.modal-content {
+		position: relative;
+		z-index: 1;
+	}
+	button.close {
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		z-index: 100;
+		background: transparent;
+		border: 3px solid $celeste;
+		color: $celeste;
+		padding: 5px;
+		margin: 5px;
+		width: 40px;
+		height: 40px;
+		font-size: 40px;
+		line-height: 1;
+		span {
+			position: absolute;
+			top: -5px;
+			right: 7px;
+		}
+	}
+}

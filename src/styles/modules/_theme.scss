@@ -1,0 +1,64 @@
+// $celeste: #57dfb2;
+$celeste: #3bdcb2;
+$black: #000;
+$white: #FFF;
+$darkteal: #004b50;
+
+$lightgrey: #808080;
+$midgrey: #52575b;
+$grey: #2d2d2d;
+$soot: #232323;
+$darkgrey: #191919;
+
+
+$theme-list: 'celeste', 'black', 'white', 'darkteal', 'grey', 'darkgrey', 'soot';
+$color-list: $celeste, $black, $white, $darkteal, $grey, $darkgrey, $soot;
+
+@for $i from 1 through length($color-list) {
+	$theme: nth($theme-list, $i);
+	$color: nth($color-list, $i);
+	.theme-#{$theme} {
+		background-color: #{$color};
+	}
+	.color-#{$theme} {
+		color: #{$color};
+		&.button {
+			&:hover,
+			&:focus {
+				color: $darkgrey;
+				background-color: #{$color};
+			}
+		}
+	}
+	.border-#{$theme} {
+		border-color: #{$color};
+	}
+	a.border-#{$theme} {
+		&:hover,
+		&:focus {
+			border-color: #{$color} !important;
+		}
+	}
+	
+}
+
+
+body {
+	background-color: $black;
+	color: $white;
+}
+
+
+.theme-celeste {
+	.color-white {
+		color: $white;
+		small {
+			color: $black;
+		}
+	}
+	.color-black {
+		small {
+			color: $white;
+		}
+	}
+}

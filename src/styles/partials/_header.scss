@@ -1,0 +1,89 @@
+/**
+ * partials/header
+ * ---
+ */
+
+
+// Logo
+.logo {
+	float: left;
+	@include max-screen($screen-xs) {
+		float: none;
+		text-align: center;
+	}
+	@include max-screen($screen-md) {
+		text-align: center;
+	}
+}
+
+header {
+	@include max-screen($screen-xs) {
+		padding: 10px 0;
+	}
+}
+
+.logo-img {
+	width: 100%;
+	max-width: 205px;
+}
+
+.logo-text-mobile {
+	text-align: center;
+	@include font-size(17px, 24px);
+	padding-top: 10px;
+	font-weight: bold;
+	color: $celeste;
+	text-transform: uppercase;
+	display: none;
+	@include max-screen($screen-sm - 1) {
+		display: block;
+		margin: 0 auto;
+		margin-left: -15px;
+	}
+	@include max-screen(400px) {
+		@include font-size(14px, 24px);
+	}
+}
+
+.logo-wrapper {
+	width: 100%;
+	float: none;
+	@include max-screen($screen-xs) {
+		width: 83.3333%;
+		float: right;
+	}
+}
+
+.navbar-toggle {
+	position: relative;
+	z-index: 10000;
+	float: none;
+	display: block;
+	margin: 0 auto;
+	margin-top: 10px;
+	.icon-bar {
+		transition: all .5s ease-out; 
+	}
+	.x-1 {
+		transform: rotate(-45deg);
+	}
+	.icon-bar + .icon-bar.x-2 {
+		transform: rotate(45deg);
+		margin-top: -1px;
+	}
+	.x-3 {
+		display: none;
+	}
+	&.collapsed {
+		margin-top: 0;
+		.x-1, 
+		.x-2,
+		.icon-bar + .icon-bar.x-2 {
+			transform: rotate(0deg);
+			margin-top: 4px;
+		}
+		.x-3 {
+			display: block;
+		}
+	}		
+}

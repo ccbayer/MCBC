@@ -1,0 +1,106 @@
+a:hover,
+a:focus {
+	color: $celeste;
+	border-bottom: 1px dotted $celeste;
+	text-decoration: none;
+}
+
+a.down-arrow {
+	width: 46px;
+	bottom: 62px;
+	left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    &.down-arrow-celeste {
+	    @include sprite($down-arrows-celeste);
+		@include text-hide;
+    }
+    &.down-arrow-black {
+	    @include sprite($down-arrows-black);	    
+		@include text-hide;
+    }
+    @include max-screen($screen-xs) {
+	    bottom: 47px;
+    }
+}
+
+a.button,
+.alm-load-more-btn,
+.sml_submitbtn,
+#searchsubmit {
+	font-weight: 700;
+	letter-spacing: .2em;
+	display: inline-block;
+	// diff padding to accomodate for letter spacing
+	padding: 10px 12px 10px 15px;
+	@include font-size(28px);
+	@include max-screen($screen-xs) {
+		@include font-size(21px);
+	}
+	text: {
+		transform: uppercase;
+		align: center;
+		decoration: none;
+	}
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+	border: {
+		width: 3px;
+		style: solid;
+	}
+	transition: all .5s ease-in-out;
+	&.theme-black {
+		&:hover,
+		&:focus { 
+			background-color: $celeste;
+			color: $black;
+		}
+	}
+	&:hover {
+		text-decoration: none;
+		border-style: solid;
+		border-width: 3px;
+	}
+	&.border-black {
+		&:hover,
+		&:focus {
+			background-color: $black;
+			color: $celeste;
+		}
+	}
+	&.color-white {
+		&:focus {
+			color: $black;
+		}
+	}
+}
+
+a {
+	color: $celeste;
+	position: relative;
+	/*
+	display: inline-block;
+	&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 100%;
+		width: 100%;
+		height: 1px;
+		border-bottom: 1px dotted $celeste;
+		transform: translateY(10px);
+		opacity: 0;
+		transition: opacity .3s, transform .3s;
+	}
+	&:hover {
+		color: $celeste;
+		&:after {
+			transform: translateY(2px);
+			opacity: .5;
+		}
+	}
+	*/
+}

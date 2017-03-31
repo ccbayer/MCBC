@@ -1,0 +1,80 @@
+section {
+	&.page-section {
+		min-height: 100vh;
+		position: relative;
+		@include max-screen($screen-xs) { 
+			padding: 47px 0;
+			height: auto;
+			&:first-of-type {
+				padding-top: 0;
+			}
+		}
+	}
+}
+
+.container-xl {
+	width: 100%;
+	max-width: 1320px;
+	margin: 0 auto;
+}
+
+.container-full-width {
+	width: 100%;
+	&.b-lazy {
+		height: 450px;
+		background: {
+			size: cover;
+			position: center center;
+			repeat: no-repeat;
+		}
+		@include max-screen($screen-lg) {
+			height: 450px;
+		}
+		@include max-screen($screen-sm) {
+			height: 500px;
+		}
+		@include max-screen($screen-xs) {
+			height: 350px;
+			background-size: cover;
+		}
+	}
+}
+
+.thirds {
+	@extend .clearfix;
+	clear: both;
+	margin: 0 auto;	
+	.third {
+		width: 33%;
+		float: left;
+		border-right: 1px solid #404040;
+		border-left: 1px solid #565656;
+		&:first-of-type {
+			border-left-width: 0px;
+		}
+		&:last-of-type {
+			border-right-width: 0px;
+		}
+	}
+	@include max-screen(768px) {
+		.thirds {
+			padding: 0 20px;
+		}
+		.third {
+			width: 100%;
+			border-width: 0;
+		}
+	}
+
+}
+
+
+hr {
+	width: 25px;
+	height: 2px;
+	border: 1px solid $white;
+	display: block;
+	margin: 40px auto;
+	border-radius: 35%;
+	background: $white;
+}

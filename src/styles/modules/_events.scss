@@ -1,0 +1,133 @@
+/* plugin overrides */
+.tribe-events-list-separator-month {
+	span {
+		background-color: transparent;
+		font-weight: normal;
+		color: $darkgrey;
+	}
+}
+
+#tribe-bar-form {
+	background: $darkgrey;
+}
+
+
+div#tribe-bar-views {
+	label {
+		color: #000;
+	}
+}
+
+.tribe-bar-mini #tribe-bar-views .tribe-bar-views-list .tribe-bar-views-option a {
+	&:after {
+		border-width: 0;	
+	}
+	
+}
+#tribe-bar-views .tribe-bar-views-list .tribe-bar-views-option.tribe-bar-active a {
+	background: transparent;
+	&:hover {
+		background: transparent;
+		color: $black;
+	}
+}
+
+.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-] {
+	background-color: $celeste;
+}
+
+#tribe-events .tribe-events-button {
+	background-color: transparent;
+	&:hover {
+		color: $celeste;
+		background-color: transparent;
+	}
+	&:after {
+		border-width: 0;
+	}
+}
+
+.single-tribe_events .tribe-events-event-meta {
+	background: $midgrey;
+}
+
+#tribe-events-content, 
+.tribe-events-before-html { 
+	background: $soot;
+	padding: 20px !important;
+}
+#tribe-events-content .tribe-events-calendar td.tribe-events-othermonth {
+	background: $midgrey;
+}
+
+.event-image {
+	text-align: center;
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+h2.tribe-events-page-title a {
+	color: $celeste;
+	&:hover {
+		color: $celeste;
+	}
+}
+
+article.single-page {
+	.tribe-events-venue-details {
+		display: none;
+	}
+}
+
+.tribe-events-list-separator-month {
+	text-align: center;
+	@extend .arvo;
+	background: transparent;
+	@include font-size(18px, 24px);
+	border-bottom: 1px dotted $celeste;
+	span { 
+		color: $celeste;
+	}
+}
+
+.tribe-events-list .tribe-events-event-cost span,
+{
+	background-color: transparent;
+	border-width: 0;
+	color: $celeste;
+	@include font-size(16px);
+}
+
+.single-tribe_events .tribe-events-schedule .tribe-events-divider {
+	display: none;
+}
+
+.single-tribe_events .tribe-events-schedule {
+	@include max-screen($screen-sm) {
+		background: transparent;
+		border: none;
+		h2 {
+			font-size: 18px;
+		}
+	}
+}
+
+.tribe-events-loop {
+	@include max-screen($screen-sm) {
+		padding: 15px;
+		.tribe-events-event-meta {
+			background-color: transparent;
+			border-width: 0;
+		}
+	}
+}
+
+#tribe-bar-collapse-toggle {
+	background: transparent;
+}
+
+.tribe-events-sub-nav {
+	padding: 10px 0 !important;
+}

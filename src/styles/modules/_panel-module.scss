@@ -1,0 +1,130 @@
+section.page-section.panel-module {
+	padding: 0 0 100px;
+	@include max-screen($screen-xs) {
+		padding-top: 0;
+	}
+	.container-full-width.b-lazy {
+		@include max-screen($screen-xs) {
+			height: 200px;
+		}
+	}
+	.introduction {
+		padding: 100px 0 120px 0;
+		text-align: center;
+		h2 {
+			color: $white;
+			small {
+				display: block;
+				color: $celeste;
+			}
+		}
+		@include max-screen($screen-sm) {
+			h2 {
+				margin: 0;
+				padding: 47px 35px;
+			}
+			padding: 0;
+			margin-bottom: 0;
+		}
+	}
+	.panel-module-wrapper {
+		@extend .clearfix;
+		@include max-screen($screen-xs) {
+			margin-bottom: 47px;
+		}
+		hr {
+			margin: 15px auto;
+			border-color: $celeste;
+			background: $celeste;
+			@include max-screen($screen-sm) {
+				margin: 22px auto;
+			}
+		}
+		.panel {
+			position: relative;
+			cursor: pointer;
+		}
+		.img-wrap {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: .25;
+			background-size: cover;
+			background-repeat: no-repeat;
+			z-index: 1;
+		}
+		.width-50 {
+			width: 50%;
+			float: left;
+			min-height: 475px;
+			.content-block {
+				text-align: center;
+				float: right;
+				padding: 90px 25%;
+			}
+			@include max-screen($screen-md) {
+				width: 100%;
+				min-height: 0;
+				.content-block {
+					float: none;
+					padding: 45px 25%;
+				}
+			}
+			@include max-screen($screen-sm) {
+				.content-block {
+					padding: 40px 15px;
+				}
+			}
+			@include max-screen($screen-xs) {
+				.content-block {
+					padding: 47px 35px;
+					.main-img {
+						height: 47px;
+						width: auto;
+						margin: 0 auto;
+						display: inline-block;
+						margin-bottom: 27px;
+					}
+				}
+			}
+		}
+		.width-100 {
+			padding: 90px 0;
+			clear: both;
+			width: 100%;
+			.content-block {
+				text-align: center;
+				margin: 0 auto;
+				max-width: 400px;
+			}
+		}
+		
+	}
+	a {
+		.content-block {
+			position: relative;
+			z-index: 100;
+			p {
+				color: $white;
+				@include max-screen($screen-xs) {
+					@include font-size(18px, 24px);
+				}
+			}
+			h3 {
+				color: $celeste;
+			}
+		}
+		&:hover  {
+			.content-block { 
+				p {
+					color: $white;
+				}
+				h3 {
+					color: $celeste;
+				}
+			}
+		}
+	}	
+}

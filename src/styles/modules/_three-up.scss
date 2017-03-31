@@ -1,0 +1,89 @@
+.three-up {
+	padding: 100px;
+	@include max-screen($screen-md) {
+		padding: 50px 0 125px 0;
+		.vertical-center {
+			position: relative;
+			top: auto;
+			left: auto;
+			transform: none;
+		}
+	}
+	.container {
+		@include max-screen($screen-xs) {
+			margin-bottom: 27px;
+		}
+	}
+	h2 {
+		text-align: center;
+		font-weight: normal;
+		small {
+			display: block;
+		}			
+		@include max-screen($screen-sm) {
+			margin-top: 0;
+			margin-bottom: 47px;	
+		}
+	}
+	h3 {
+		text-transform: uppercase;
+		font-family: arvo;
+	}
+	hr {
+		margin: 15px auto;
+		@include max-screen($screen-sm) {
+			margin: 22px auto;
+		}
+	}
+	.item {
+		@include make-md-column(4);	
+		@include max-screen($screen-sm) {
+			margin-bottom: 47px;	
+		}
+	}
+	// theme colors: celeste
+	&.theme-celeste {
+		h3,
+		p,
+		h3 a {
+			color: $black;
+			text-align: center;
+			text-decoration: none;
+			@extend .arvo;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		h3 {
+			@include min-screen($screen-md) {
+				height: 53px;	
+			}
+			@include max-screen($screen-xs) {
+				width: 50%;
+				margin: 0 auto;
+			}
+		}
+		p {
+			@extend .raleway;
+			padding: 10px 45px;
+			@include max-screen($screen-xs) {
+				@include font-size(18px, 24px);
+			}
+		}
+	}
+	.icon-round {
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 122px;
+		background: $black;
+		border: 5px solid $black;
+		border-radius: 50%;
+		@include max-screen($screen-sm) {
+			height: 102px;
+			width: auto;
+			margin-bottom: 23px;
+		}
+	}
+
+}

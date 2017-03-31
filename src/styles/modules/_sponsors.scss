@@ -1,0 +1,28 @@
+.sponsor-grid {
+	padding: 15px 0;
+	@include clearfix();
+	.column {
+		height: 250px;
+		margin-bottom: 10px;
+	}
+	.sp-image {
+		text-align: center;
+		height: 150px;
+		img {
+			width: 150px;
+			height: auto;
+		}
+	}
+	h4 {
+		color: $celeste;
+		
+	}
+	strong {
+		font-weight: 700;
+	}
+}
+
+.sponsor-info {
+	margin-bottom: 15px;
+	
+}

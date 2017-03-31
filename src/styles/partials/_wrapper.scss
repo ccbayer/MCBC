@@ -1,0 +1,27 @@
+/**
+ * partials/wrapper
+ * ---
+ */
+
+
+.wrapper {
+  max-width: $wrapper-width;
+  padding: 0 $margin-horizontal-large;
+  margin: 0 auto;
+  position: relative;
+}
+
+.inner-body-wrapper {
+  transform: translateX(0);
+  transition: transform 0.6s ease;
+  &.open {
+	  transform: translateX(200%);
+  }
+  &.open.dropdown {
+	  transform: translateX(100%);	  
+  }
+}
+
+.body-wrapper {
+	overflow: hidden;
+}

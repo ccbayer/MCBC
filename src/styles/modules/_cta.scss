@@ -1,0 +1,15 @@
+.cta {
+	clear: both;
+	text-align: center;
+	padding: 40px 0;
+	margin: 0 auto;
+
+	.description {
+		text-transform: uppercase;
+		margin: 25px auto;
+		@include font-size(14px, 22px);
+		letter-spacing: .2em;
+		width: 75%;
+		text-align: center;
+	}
+}

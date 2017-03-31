@@ -1,0 +1,19 @@
+.search-results-page {
+	.searchform {
+		text-align: center;
+		input {
+			display: block;
+			width: 50%;
+			margin: 0 auto;
+			color: $black;
+			&#searchsubmit {
+				color: $celeste;
+				border: 3px solid $celeste;
+				background: transparent;
+				display: inline-block;
+				width: auto;
+				margin: 20px auto;
+			}
+		}
+	}
+}

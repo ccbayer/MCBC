@@ -1,0 +1,6 @@
+# MODULES / SUPPORT
+./node_modules/*
+./bower_components/*
+
+# OS FILES
+.DS_Store

@@ -1,0 +1,32 @@
+{
+  "name": "mcbc-2015",
+  "description": "Clean Start",
+  "main": "index.js",
+  "authors": [
+    "ccbayer <ccbayer@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.6",
+    "bLazy": "blazy#~1.5.1",
+    "equalize": "~1.0.2",
+    "SocialShare": "~1.1.0",
+    "slick-carousel": "~1.5.9"
+  },
+  "devDependencies": {
+    "sass-mediaqueries": "~1.6.1",
+    "waypoints": "~4.0.0",
+    "jquery.scrollTo": "~2.1.2",
+    "jquery-validation": "~1.14.0"
+  }
+}

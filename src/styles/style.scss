@@ -1,0 +1,50 @@
+/*!
+Theme Name: MCBC 2015 - Homebrew
+Theme URI: http://marinbike.org
+Author: Colin Bayer
+Author URI: http://colinbayer.com
+Description: Custom MCBC Theme  based on Blank Slate Version: 4.0.2
+*/
+
+// Modules
+@import "media-queries";
+@import "modules/variables";
+@import "modules/bootstrap";
+@import "modules/mixins";
+@import "modules/theme";
+@import "partials/type";
+@import "partials/sprites";
+@import "partials/utilities";
+@import "partials/wordpress";
+
+
+@import "modules/layout";
+@import "partials/btns-and-links";
+@import "modules/social-media";
+
+
+// structural modules
+@import "partials/wrapper";
+@import "partials/header";
+@import "partials/nav";
+@import "partials/sidebar";
+@import "partials/footer";
+@import "modules/posts";
+
+
+// custom modules
+@import "modules/page-home";
+@import "modules/events";
+@import "modules/carousel";
+@import "modules/three-up";
+@import "modules/panel-module";
+@import "modules/featured-bullets";
+@import "modules/social-feed";
+@import "modules/cta";
+@import "partials/form";
+@import "modules/modal";
+@import "modules/sponsors";
+@import "modules/site-search";
+@import "modules/subscribe";
+
+

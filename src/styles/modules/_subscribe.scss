@@ -1,0 +1,33 @@
+form.sml_subscribe {
+	margin: 0 auto;
+	text-align: center;
+	input, label {
+		display: inline-block;
+		margin: 0 15px;
+	}
+	.sml_submit {
+		margin: 30px 0;
+	}
+	input[type="text"] {
+		color: $black;
+		padding: 10px 5px;
+		&.error {
+			color: red;
+			border: 1px solid red;
+		}
+	}
+	p {
+		margin: 30px 0;
+		&.sml_thankyou {
+			color: $celeste;
+			font-family: 'Arvo', serif;
+			letter-spacing: .01em;
+			font-size: 18px;
+		}
+	}
+	label.error {
+		color: red;
+		display: block;
+		margin-top: 5px;
+	}
+}

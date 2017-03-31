@@ -1,0 +1,14 @@
+.triangle {
+	display: none;
+	position: absolute;
+	background-image: url('images/celeste-triangle-2.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	right: 0;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 1000;
+}

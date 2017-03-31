@@ -1,0 +1,165 @@
+/**
+ * partials/utils
+ * ---
+ * Utils classes
+ */
+
+
+// clearfix: http://nicolasgallagher.com/micro-clearfix-hack/
+.clear {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.reset-box {
+  @include reset-box;
+}
+
+// positioning
+
+.position-abs {
+	position: absolute;
+}
+
+.position-rel {
+	position: relative;
+}
+
+// responsive mixins
+.hide-less-than-tablet {
+	@include max-screen(768px) {
+		display: none;
+	}
+}
+
+.hide-more-than-tablet {
+	@include min-screen(768px + 1) {
+		display: none;
+	}	
+}
+
+i.icon {
+	display: inline-block;
+	margin: 0 auto;
+	&.icon-home {
+		@include sprite($ftr-icon-home-59x59);
+	}
+	&.icon-email {
+		@include sprite($ftr-icon-envelope-59x59);		
+	}
+	&.icon-mail {
+		@include sprite($ftr-icon-mailbox-59x59);		
+	}
+	&.icon-phone {
+		@include sprite($ftr-icon-phone-59x59);		
+	}
+}
+
+.navigation-follow {
+	list-style-type: none;
+	position: fixed;
+	right: 40px;
+	top: 25%;
+	z-index: 10000;
+	@include max-screen($screen-md) {
+		display: none;
+	}
+	li {	
+		border-radius: 50%;
+		border: 2px solid $white;
+		background-color: $white;
+		width: 13px;
+		height: 13px;
+		margin-bottom: 13px;
+		&:hover,
+		&.active {
+			background-color: $celeste;
+		}
+		a {
+			width: 100%;
+			height: 100%;
+			display: block;
+			font-size: 0;
+			line-height: 0;
+			text-indent: -10000em;
+		}
+	}
+}
+
+.vertical-center {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 0%;
+	transform:translate(0%, -50%);
+}
+
+.hide-more-than-1000 {
+	@include min-screen(1000px) {
+		display: none;
+	}
+}
+.hide-less-than-1000 {
+	@include max-screen(1000px) {
+		display: none;
+	}
+}
+
+.mcbc-hidden-xs {
+	@include min-screen($screen-xs + 1px) {
+		display: none;
+	}
+}
+
+.mcbc-hidden-below-tablet {
+	display: none;
+	@include max-screen($screen-sm - 1) {
+		display: block;
+	}
+}
+.mcbc-visible-xs-block {
+	display: none;
+	@include max-screen($screen-xs) {
+		display: block;
+	}
+}
+.mcbc-visible-sm-block  {
+	display: none;
+	@include max-screen($screen-sm) {
+		display: block;
+	}
+}
+
+.mcbc-visible-above-xs {
+	display: block;
+	@include max-screen($screen-xs) {
+		display: none;
+	}
+}
+.mcbc-visible-inline-above-xs {
+	display: inline;
+	@include max-screen($screen-xs) {
+		display: none;
+	}
+}
+.mcbc-visible-inline-above-sm {
+	display: inline;
+	@include max-screen($screen-sm - 1) {
+		display: none;
+	}
+}
+
+// OVERRIDES
+.row {
+	@include max-screen($screen-lg) {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}

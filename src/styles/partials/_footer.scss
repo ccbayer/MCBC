@@ -1,0 +1,124 @@
+/**
+ * partials/footer
+ * ---
+ */
+
+footer {
+	padding: 90px 0 120px 0;
+	ul.button-list {
+		padding: 0;
+		list-style: none;
+		li {
+			display: block;
+			text-align: center;
+			padding: 45px 0;
+			&:first-of-type {
+				padding-top: 0;
+			}
+			@include max-screen(768px) {
+				padding: 20px 0;	
+			}
+			a.button {
+				width: 77%;
+			}
+		}
+	}
+	.content-block, {
+		text-align: center;
+		&:first-of-type {
+			margin-bottom: 130px;
+		}
+		min-height: 145px;
+		@include max-screen(768px) {
+			margin: 0;	
+			min-height: 0;
+			padding: 20px 0;
+			&:first-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+	h4 {
+		color: $celeste;
+		text-transform: uppercase;
+	}
+	address,
+	a {
+		color: $white;
+	}
+	a {
+		color: $white;
+		text-decoration: underline;
+		&[href^=tel] {
+			text-decoration: none;
+		}
+		&:hover {
+			color: $celeste;
+			border-bottom-width: 0;
+		}
+	}
+	.social-media {
+		clear: both;
+		width: 33%;
+		padding: 0;
+		list-style: none;
+		li {
+			display: inline-block;
+			width: 33%;
+			float: left;
+			text-align: center;
+			&.label {
+				display: block;
+				text-transform: uppercase;
+				letter-spacing: .25em;
+				width: 100%;
+				float: none;
+				color: $celeste;
+				margin-bottom: 15px;	
+			}
+		}
+		@include max-screen($screen-sm) {
+			width: 100%;
+		}
+	}
+	ul.footer-link-list {
+		margin: 0px auto;
+		list-style: none;
+		clear: both;
+		padding: 0;
+		li {
+			display: block;
+			width: 100%;
+			text-align: center;
+			margin-bottom: 10px;
+			a {
+				color: #4e5357;
+				text: {
+					transform: uppercase;
+					decoration: none;
+				}
+				&:hover{
+					border-bottom-width: 0;
+					text-decoration: underline; 
+				}
+			}
+		}
+	}
+	.footer-message {
+		clear: both;
+		margin: 50px auto 0 auto;
+		text-align: center;
+		color: $white;
+	}
+}
+
+.footer-logo {
+	margin: 0 auto 100px auto;
+	width: 100%;
+	max-width: 387px;
+	height: auto;
+	@include max-screen($screen-sm) {
+		padding: 20px;
+		margin-bottom: 0;
+	}
+}

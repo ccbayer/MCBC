@@ -1,0 +1,57 @@
+.wpcf7,
+.modal-content {
+	label {
+		margin: 10px 0 5px;
+	}
+	input {
+		color: $black;
+		@include font-size(16px);
+		border: 1px solid #999;
+		background-color: #e3e3e3;
+		padding: 1em;
+	}
+	textarea {
+		width: 100%;
+		padding: 1em;
+		margin: 15px 0;
+		color: $black;
+		@include font-size(16px);
+	}
+	input[type="submit"] {
+		background-color: transparent;
+		color: $white;
+		margin: 15px 0;
+		text-align: center !important;
+		font-weight: 700;
+		letter-spacing: .2em;
+		display: inline-block;
+		padding: 10px 15px;
+		@include font-size(34px);
+		text: {
+			transform: uppercase;
+			align: center;
+			decoration: none;
+		}
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+		border: {
+			width: 4px;
+			style: solid;
+			color: $white;
+		}
+		transition: all .5s ease-in-out;
+		&:hover {
+			background-color: $white;
+			color: $black;			
+		}
+
+	}
+	.wpcf7-list-item {
+		display: block;
+		width: 50%;
+		margin: 15px auto;
+		padding: 5px 0;
+	}
+}

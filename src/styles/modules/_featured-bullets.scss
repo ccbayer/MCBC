@@ -1,0 +1,51 @@
+.featured-bullets {
+	padding: 109px 0 100px 0;
+	@include max-screen($screen-xs) {
+		padding: 47px 0;
+	}
+	h2 {
+		small {
+			display: block;
+		}
+	}
+	ul {
+		list-style: none;
+		margin: 100px 0 0 0;
+		padding: 0;
+		@include max-screen($screen-xs) {
+			margin: 47px 0 0 0;
+		}
+		li {
+			@include make-md-column(3);
+			color: $white;
+			text-align: center;
+			padding: 0 8%;
+			&:before {
+				content: '\002022';
+				font-size: 88px;
+				line-height: 40px;
+				text-align: center;
+				color: $celeste;
+				display: block;
+			}
+			@include max-screen($screen-sm) {
+				margin: 30px 0;	
+			}
+			@include max-screen($screen-xs) {
+				@include font-size(18px, 24px);
+				margin: 47px 0;
+				&:first-of-type {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+	&.theme-darkteal {
+		color: $white; 
+		h2 {
+			small {
+				color: $celeste;
+			}
+		}
+	}
+}
