@@ -24,7 +24,6 @@ Description: Custom MCBC Theme  based on Blank Slate Version: 4.0.2
 
 
 // structural modules
-@import "partials/wrapper";
 @import "partials/header";
 @import "partials/nav";
 @import "partials/sidebar";
@@ -47,4 +46,4 @@ Description: Custom MCBC Theme  based on Blank Slate Version: 4.0.2
 @import "modules/site-search";
 @import "modules/subscribe";
 
-
+@import "modules/_mean-menu";

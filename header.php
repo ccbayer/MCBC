@@ -1,4 +1,4 @@
-<?php 
+<?php
 //	require('lib/facebook-php-sdk-master/src/facebook.php');
 //	require('lib/index.php');
 ?>
@@ -15,7 +15,7 @@
 	      if( ! is_home() ):
 	        wp_title( '|', true, 'right' );
 	      endif;
-	      bloginfo( 'name' );		  
+	      bloginfo( 'name' );
 	  }
 	    ?>">
 	<meta property="og:site_name" content="Marin County Bicycle Coalition"/>
@@ -52,7 +52,7 @@
 	      if( ! is_home() ):
 	        wp_title( '|', true, 'right' );
 	      endif;
-	      bloginfo( 'name' );		  
+	      bloginfo( 'name' );
 	  }
     ?>
   </title>
@@ -70,7 +70,7 @@
     s.parentNode.insertBefore(wf, s);
   })(); </script>
   <?php wp_head(); ?>
-	<?php 
+	<?php
 	$cats = get_field('display_event_category');
 	if(!empty($cats)):
 		$events = tribe_get_events( array(
@@ -92,23 +92,16 @@
 <div class="body-wrapper">
 
 	<header>
+		<div id="mobile-nav-target"></div>
+		<div id="meanMenu"><span class="hidden-md hidden-lg logo-text-mobile">Marin County Bicycle Coalition</span></div>
 		<div class="container-xl">
 			<div class="row-fluid hide-more-than-1000">
-					<div class="nav-btn-wrapper mcbc-hidden-below-tablet">
-						<button type="button" class="navbar-toggle collapsed">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar x-1"></span>
-							<span class="icon-bar x-2"></span>
-							<span class="icon-bar x-3"></span>
-						</button>
-					</div>
 					<div class="text-center logo-wrapper">
 						<a href="<?php echo home_url(); ?>">
-							<?php // svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script ?>
 							<img src="<?php echo get_template_directory_uri(); ?>/images/mcbc-logo.gif" alt="The Marin County Bicycle Commission" class="logo-img mcbc-visible-inline-above-sm">
-							<span class="hidden-md hidden-lg logo-text-mobile">Marin County Bicycle Coalition</span>
 						</a>
-					</div>	
+					</div>
+				</div>
 			</div>
 			<div class="row navigation-wrapper">
 				<div class="logo col-lg-2 col-md-2 col-sm-3 col-xs-12 hide-less-than-1000">
@@ -126,11 +119,11 @@
 							'menu_class' => 'false',
 							//Process nav menu using our custom nav walker
 							'walker' => new wp_bootstrap_navwalker())
-						);	
+						);
 					?>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-									</nav>
+				</nav>
 				<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
 					<?php get_template_part('modules/links', 'socialmedia-header'); ?>
 				</div>
@@ -138,16 +131,3 @@
 		</div>
 	</header>
 	<div class="inner-body-wrapper">
-		<nav class="mobile-nav-slide-out">
-		<?php
-			wp_nav_menu( array(
-				'menu' => 'header',
-				'depth' => 0,
-				'container'=> 'div',
-			    'container_class' => '',
-				'container_id' => 'mobile-header-nav',
-				//Process nav menu using our custom nav walker
-				'walker' => new wp_bootstrap_navwalker())
-				);	
-		?>
-		</nav>

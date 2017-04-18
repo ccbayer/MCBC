@@ -42,7 +42,7 @@
 .hide-more-than-tablet {
 	@include min-screen(768px + 1) {
 		display: none;
-	}	
+	}
 }
 
 i.icon {
@@ -52,13 +52,13 @@ i.icon {
 		@include sprite($ftr-icon-home-59x59);
 	}
 	&.icon-email {
-		@include sprite($ftr-icon-envelope-59x59);		
+		@include sprite($ftr-icon-envelope-59x59);
 	}
 	&.icon-mail {
-		@include sprite($ftr-icon-mailbox-59x59);		
+		@include sprite($ftr-icon-mailbox-59x59);
 	}
 	&.icon-phone {
-		@include sprite($ftr-icon-phone-59x59);		
+		@include sprite($ftr-icon-phone-59x59);
 	}
 }
 
@@ -71,7 +71,7 @@ i.icon {
 	@include max-screen($screen-md) {
 		display: none;
 	}
-	li {	
+	li {
 		border-radius: 50%;
 		border: 2px solid $white;
 		background-color: $white;
@@ -162,4 +162,10 @@ i.icon {
 		margin-left: 0;
 		margin-right: 0;
 	}
+}
+
+// sticky
+.stuck {
+  position: fixed !important;
+  top: 0;
 }
