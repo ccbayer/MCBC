@@ -33,7 +33,10 @@ header {
 			}
 		}
 		@include screen($screen-xs, $screen-lg) {
-			padding: 20px;
+			padding: 10px 0;
+		}
+		@include max-screen($screen-sm) {
+			position: relative !important;
 		}
 	}
 

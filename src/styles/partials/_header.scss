@@ -22,6 +22,12 @@ header {
 	}
 }
 
+.body-wrapper > .sticky-wrapper {
+	@include max-screen($screen-sm) {
+		height: auto !important;
+	}
+}
+
 .logo-img {
 	width: 100%;
 	max-width: 205px;

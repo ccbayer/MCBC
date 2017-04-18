@@ -94,7 +94,7 @@
 	<header>
 		<div id="mobile-nav-target"></div>
 		<div id="meanMenu"><span class="hidden-md hidden-lg logo-text-mobile">Marin County Bicycle Coalition</span></div>
-		<div class="container-xl">
+			<div class="container-xl">
 			<div class="row-fluid hide-more-than-1000">
 					<div class="text-center logo-wrapper">
 						<a href="<?php echo home_url(); ?>">
@@ -102,7 +102,6 @@
 						</a>
 					</div>
 				</div>
-			</div>
 			<div class="row navigation-wrapper">
 				<div class="logo col-lg-2 col-md-2 col-sm-3 col-xs-12 hide-less-than-1000">
 					<a href="<?php echo home_url(); ?>">

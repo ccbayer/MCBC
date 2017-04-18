@@ -146,7 +146,7 @@ $(function() {
 
 	// waypoints
 	var sticky = new Waypoint.Sticky({
-		element: $('.navigation-wrapper')[0]
+		element: $('header')[0]
 	});
 
 	function updateTheIndicators(id) {
