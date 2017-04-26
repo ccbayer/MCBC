@@ -5,9 +5,9 @@
  */
 header {
 	background: $black;
-	width: 100%;	
+	width: 100%;
 	z-index: 1040;
-	.navigation-wrapper { 
+	.navigation-wrapper {
 		padding: 55px 0;
 		transition: padding .25s;
 		@include screen($screen-md, $screen-lg) {
@@ -33,7 +33,10 @@ header {
 			}
 		}
 		@include screen($screen-xs, $screen-lg) {
-			padding: 20px;
+			padding: 10px 0;
+		}
+		@include max-screen($screen-sm) {
+			position: relative !important;
 		}
 	}
 
@@ -53,7 +56,9 @@ header {
 		transform: rotate(90deg);
 	}
 }
-.navbar-toggle { 
+
+
+.navbar-toggle {
 	@include min-screen($screen-sm - 1) {
 		display: none;
 	}
@@ -207,8 +212,8 @@ header {
 			clear: both;
 			margin-bottom: 15px;
 			padding-left: 20px;
-			&.menu-item-has-children { 
-				padding-left: 0;	
+			&.menu-item-has-children {
+				padding-left: 0;
 			}
 			a {
 				color: $white;

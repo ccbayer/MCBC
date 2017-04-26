@@ -1,6 +1,6 @@
 # MODULES / SUPPORT
-./node_modules/*
-./bower_components/*
+node_modules/
+bower_components/
 .sass-cache/*
 
 # OS FILES

@@ -22,6 +22,12 @@ header {
 	}
 }
 
+.body-wrapper > .sticky-wrapper {
+	@include max-screen($screen-sm) {
+		height: auto !important;
+	}
+}
+
 .logo-img {
 	width: 100%;
 	max-width: 205px;
@@ -50,7 +56,8 @@ header {
 	float: none;
 	@include max-screen($screen-xs) {
 		width: 83.3333%;
-		float: right;
+		float: left;
+		padding-left: 13px;
 	}
 }
 
@@ -62,7 +69,7 @@ header {
 	margin: 0 auto;
 	margin-top: 10px;
 	.icon-bar {
-		transition: all .5s ease-out; 
+		transition: all .5s ease-out;
 	}
 	.x-1 {
 		transform: rotate(-45deg);
@@ -76,7 +83,7 @@ header {
 	}
 	&.collapsed {
 		margin-top: 0;
-		.x-1, 
+		.x-1,
 		.x-2,
 		.icon-bar + .icon-bar.x-2 {
 			transform: rotate(0deg);
@@ -85,5 +92,5 @@ header {
 		.x-3 {
 			display: block;
 		}
-	}		
+	}
 }
