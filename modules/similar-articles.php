@@ -38,7 +38,16 @@ $myposts = get_field('similar_posts');
 <section class="theme-grey">
 	<div class="container similar-articles-wrapper">
 		<div class="row">
-			<h2 class="subheadline"><small>Similar</small> Articles</h2>				
+			<h2 class="subheadline">
+			<?php 
+				$headline = get_field('similar_posts_headline', $id);
+				if($headline):	
+					echo $headline;
+			?>
+				<?php else: ?>
+					<small>Similar</small> Articles
+				<?php endif; ?>
+			</h2>
 		</div>
 		<div class="row similar-articles">
 <?php

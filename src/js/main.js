@@ -54,22 +54,7 @@ $(function() {
 	$(window).resize(function() {
   		bLazy.revalidate();
 	});
-	/*
-	$('.slider-full-width').on('slide.bs.carousel', function () {
-		var
-			// next item
-			$container = $(this).find('.item.active').next('.item'),
-			img = $container.data('image')
-		;
-		if(img) {
-			setBackgroundImage($container, img);
-		}
-  	});
 
-  	// initial load for the first slide
-  	var $carouselInit = $('.slider-full-width').find('.item.active');
-  	setBackgroundImage($carouselInit, $carouselInit.data('image'));
-  	*/
   	$('.slick-wrapper').on('afterChange', function(event, slick, currentSlide, nextSlide){
 	  	// reinitialize lazy
   		bLazy.revalidate();
@@ -103,10 +88,6 @@ $(function() {
 	$('.menu-item').on('hide.bs.dropdown', function () {
 		$('.inner-body-wrapper').removeClass('dropdown');
 	});
-
-	$('body')
-	.on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); })
-	.on('touchstart.dropdown', '.dropdown-menu', function (e) { e.preventDefault(); });
 
   	// equlize
   	var initEqualize = function() {
@@ -142,6 +123,23 @@ $(function() {
 		'prependEl': $prependEl
 	});
 	$('#meanMenu').hide();
+
+	// trigger mean menu when parent is clicked
+	$('.mean-container li.menu-item-has-children').on('click', function(event) {
+			event.stopPropagation();
+			var $target = $(event.target);
+			if(!$target.hasClass('mean-expand')) {
+				var $expander = $(this).find('.mean-expand');
+				if ($expander.hasClass('mean-clicked')) {
+						$expander.text('+');
+					$expander.prev('ul').slideUp(300, function(){});
+			} else {
+					$expander.text('-');
+					$expander.prev('ul').slideDown(300, function(){});
+			}
+			$expander.toggleClass('mean-clicked');
+		}
+	});
 
 
 	// waypoints
