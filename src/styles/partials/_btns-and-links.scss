@@ -76,6 +76,13 @@ a.button,
 			color: $black;
 		}
 	}
+	&.color-soot {
+		&:hover {
+			background-color: none;
+			border-color: $celeste;
+			color: $celeste;
+		}
+	}
 }
 
 a {
