@@ -32,6 +32,7 @@ $myposts = get_field('similar_posts');
 		// fall back: get similar articles in the same taxonomy.
 		$myposts = getSimilarPosts('news', $id, $term_list->name, 3);
 	endif;
+
 	
 	if($myposts):
 ?>
