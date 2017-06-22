@@ -64,13 +64,7 @@
 		if($full_height):
 	?>
 		</div>
-	<?php
-		if(is_home()):
-	?>
 		<a href="#section-<?php echo $next; ?>" class="down-arrow down-arrow-black position-abs color-black">Down</a>
-	<?php
-		endif;	
-	?>
 	<?php
 		endif;	
 	?>

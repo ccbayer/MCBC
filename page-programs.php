@@ -64,21 +64,6 @@ endif;
 		</div>
 	</div>
 </section>
-<?php
-//
-$layouts = count(get_field('layouts'));	
-// check if the flexible content field has rows of data
-if( have_rows('layout') ):
-	$i = 0;			
-	while ( have_rows('layout') ) : the_row();
-		$i ++;
-		$next = $i + 1;
-			$template_name = 'layouts/layout-' . get_row_layout();
-			include(locate_template($template_name . '.php'));				
-	endwhile;
-	
-endif;
-?>
 <?php 
 	get_template_part('modules/similar', 'articles');
 	get_template_part('modules/feed', 'socialmedia'); 
