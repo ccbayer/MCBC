@@ -1,20 +1,29 @@
 <?php
 $post_type = get_post_type();
 $id = $post->ID;
+$isProjectPage = false;
+if(get_page_template_slug() == "page-projects.php"):
+	$isProjectPage = true;
+endif;
 
 // pages don't have terms, so grab the custom one
 if($post_type === 'page'):
-	$term = get_field('related_taxonomy');
-	$term_list = get_term($term, 'target');
+	if($isProjectPage):
+		// get the associated project
+		$term = get_field('selected_project');
+		$term_list = get_term($term, 'category');
+	else:
+		$term = get_field('related_taxonomy');
+		$term_list = get_term($term, 'target');
+	endif;
 else:
 	$term_list = wp_get_post_terms($post->ID, 'target', array("fields" => "all"));
 	// if there are more than one, just pick first
-	$term_list = $term_list[0];
+	$term_list = $term_list[0]; 
 endif;
 
+
 $customType = false;
-
-
 $myposts = get_field('similar_posts');
 	if($myposts):
 		$customType = true;
@@ -30,9 +39,13 @@ $myposts = get_field('similar_posts');
 		endif;
 	else:
 		// fall back: get similar articles in the same taxonomy.
-		$myposts = getSimilarPosts('news', $id, $term_list->name, 3);
+		if($isProjectPage): 
+			$myposts = getSimilarPosts('news', $id, $term_list->name, 3, 'category');
+		else:
+			$myposts = getSimilarPosts('news', $id, $term_list->name, 3);		
+		endif;
 	endif;
-	
+
 	if($myposts):
 ?>
 <section class="theme-grey">
