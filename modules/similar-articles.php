@@ -11,7 +11,7 @@ if($post_type === 'page'):
 	if($isProjectPage):
 		// get the associated project
 		$term = get_field('selected_project');
-		$term_list = get_term($term, 'category');
+		$term_list = get_term($term, 'project');
 	else:
 		$term = get_field('related_taxonomy');
 		$term_list = get_term($term, 'target');
@@ -38,12 +38,7 @@ $myposts = get_field('similar_posts');
 			$myposts = array_merge($myposts, getSimilarPosts('news', $exclude, $term_list->name, $num));
 		endif;
 	else:
-		// fall back: get similar articles in the same taxonomy.
-		if($isProjectPage): 
-			$myposts = getSimilarPosts('news', $id, $term_list->name, 3, 'category');
-		else:
-			$myposts = getSimilarPosts('news', $id, $term_list->name, 3);		
-		endif;
+		$myposts = getSimilarPosts('news', $id, $term_list->name, 3, $term_list->taxonomy);
 	endif;
 
 	if($myposts):
@@ -107,14 +102,15 @@ $myposts = get_field('similar_posts');
 			<div class="col-md-4 col-md-offset-4 text-center">
 				<?php 
 					if($term_list) {
-						$see_more_link = get_term_link($term_list->slug, 'target');	
+						$see_more_link = get_term_link($term_list->slug, $term_list->taxonomy);	
 						$see_more_title = $term_list->name;
 					} else {
 						$see_more_link = get_post_type_archive_link('news');
 						$see_more_title = $post_type;			
 					}
+					$see_more_label = get_field('see_more_label') ? get_field('see_more_label') : "See More";
 				?>
-				<a href="<?php echo $see_more_link; ?>" title="View more <?php echo $see_more_title; ?> Articles" class="button border-white color-white">See More</a>
+				<a href="<?php echo $see_more_link; ?>" title="View more <?php echo $see_more_title; ?> Articles" class="button border-white color-white"><?php echo $see_more_label; ?></a>
 			</div>
 		</div>
 	</div>

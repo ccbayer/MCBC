@@ -1,11 +1,11 @@
 {
-    "key": "group_59504263b8b23",
-    "title": "Project Page",
+    "key": "group_566491eb08389",
+    "title": "News Items",
     "fields": [
         {
-            "key": "field_5950426bdca05",
-            "label": "Selected Project",
-            "name": "selected_project",
+            "key": "field_566491f0a0584",
+            "label": "Target Audience",
+            "name": "target_audience",
             "type": "taxonomy",
             "instructions": "",
             "required": 0,
@@ -15,40 +15,21 @@
                 "class": "",
                 "id": ""
             },
-            "taxonomy": "project",
-            "field_type": "select",
+            "taxonomy": "target",
+            "field_type": "checkbox",
             "allow_null": 0,
             "add_term": 1,
-            "save_terms": 0,
+            "save_terms": 1,
             "load_terms": 0,
             "return_format": "id",
             "multiple": 0
         },
         {
-            "key": "field_59504351dca06",
-            "label": "Similar Article Headline",
-            "name": "similar_posts_headline",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Similar Articles",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_59504c11a500e",
+            "key": "field_5664b87afeee2",
             "label": "Similar Posts",
             "name": "similar_posts",
             "type": "repeater",
-            "instructions": "Choose up to three similar posts to appear below the page content. If left blank, the page will pull from the project category.",
+            "instructions": "Choose up to 3 Similar Posts.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -56,14 +37,14 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
+            "collapsed": "field_5664b895feee3",
             "min": 0,
             "max": 3,
             "layout": "table",
             "button_label": "Add Similar Post",
             "sub_fields": [
                 {
-                    "key": "field_59504c2da500f",
+                    "key": "field_5664b895feee3",
                     "label": "Similar Post",
                     "name": "similar_post",
                     "type": "post_object",
@@ -75,10 +56,10 @@
                         "class": "",
                         "id": ""
                     },
-                    "post_type": [],
-                    "taxonomy": [
-                        "category:projects"
+                    "post_type": [
+                        "news"
                     ],
+                    "taxonomy": [],
                     "allow_null": 0,
                     "multiple": 0,
                     "return_format": "object",
@@ -87,11 +68,11 @@
             ]
         },
         {
-            "key": "field_59533cadde596",
-            "label": "See More Label",
-            "name": "see_more_label",
-            "type": "text",
-            "instructions": "CTA Button Label for seeing all posts in this project.",
+            "key": "field_5953366391fee",
+            "label": "Project",
+            "name": "project",
+            "type": "taxonomy",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -99,19 +80,22 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "See More",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "taxonomy": "project",
+            "field_type": "checkbox",
+            "allow_null": 0,
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 0,
+            "return_format": "object",
+            "multiple": 0
         }
     ],
     "location": [
         [
             {
-                "param": "post_template",
+                "param": "post_type",
                 "operator": "==",
-                "value": "page-projects.php"
+                "value": "news"
             }
         ]
     ],
@@ -123,5 +107,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1498627277
+    "modified": 1498625664
 }
