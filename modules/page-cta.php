@@ -28,11 +28,11 @@
 
 
 <div class="cta">
-	<a href="<?php echo $cta['href'] ?>" target="<?php echo $cta['target']; ?>" class="button border-white color-white"><?php echo $cta['text']; ?></a>
+	<a href="<?php echo $cta['href'] ?>" target="<?php echo $cta['target']; ?>" class="button border-soot color-soot"><?php echo $cta['text']; ?></a>
 <?php 
 	if($cta['desc']):	
 ?>
-	<div class="description"><?php echo $cta['desc']; ?></div>
+	<div class="description color-soot"><?php echo $cta['desc']; ?></div>
 <?php
 	endif;	
 ?>

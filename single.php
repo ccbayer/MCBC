@@ -29,7 +29,7 @@ if(!$hero_image['url']):
 endif;
 ?>
 <div class="container-full-width b-lazy" data-src="<?php echo $hero_image['url']; ?>"></div>
-<section class="theme-soot default-pad article-wrapper">
+<section class="theme-white default-pad article-wrapper">
 	<div class="container">
 		<div class="row">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>

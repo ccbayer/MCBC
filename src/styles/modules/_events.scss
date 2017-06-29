@@ -131,3 +131,15 @@ article.single-page {
 .tribe-events-sub-nav {
 	padding: 10px 0 !important;
 }
+
+// white
+
+.theme-white {
+	.tribe-events-list,
+	#tribe-events-content {
+		background-color: $white;
+	}
+	.tribe-event-schedule-details {
+		color: $soot;
+	}
+}
