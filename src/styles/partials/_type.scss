@@ -48,14 +48,6 @@ h3 {
 	}
 }
 
-.page-content {
-	h3 {
-		color: $celeste;
-		@include font-size(22px);
-		letter-spacing: .05em;
-		text-align: center;
-	}
-}
 
 .slider-heading {
 	h1 {
@@ -129,6 +121,26 @@ body p {
 	@include font-size(15px, 18px);
 	@include max-screen($screen-sm) {
 		@include font-size(18px, 24px);
+	}
+}
+
+// post content
+
+.page-content {
+	h3 {
+		color: $celeste;
+		@include font-size(22px);
+		letter-spacing: .05em;
+		text-align: center;
+	}
+	p,
+	li,
+	td,
+	th {
+		@include font-size(16px, 22px);
+	}
+	li li {
+		font-size: 16px;
 	}
 }
 
