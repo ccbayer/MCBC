@@ -18,7 +18,7 @@ endif;
 
 
 ?>
-<section class="theme-soot archive-wrapper">
+<section class="theme-soot archive-wrapper project-archive-wrapper">
 	<div class="container">
 		<div class="row">
 			<div class="headline">
@@ -42,11 +42,11 @@ endif;
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-12">			
-				<div class="description">
-					<?php echo term_description( $term->term_id, 'project' ); ?>
+			<div class="col-md-8 col-md-offset-2">			
+				<div class="text-center">
+					<p><?php echo term_description( $term->term_id, 'project' ); ?>
 				</div>
-				<div class="cta">
+				<div class="cta">						
 					<?php if ( get_field('back_to_page_link', $term) && get_field('back_to_page_label',$term) ): ?>
 						<a href="<?php the_field('back_to_page_link', $term); ?>" class="button border-white color-white"><?php the_field('back_to_page_label',$term); ?></a>
 					<?php endif; ?>
@@ -54,6 +54,7 @@ endif;
 			</div>
 		</div>
 		<div class="row">
+			<div class="col-md-12">
 			<div class="equalize equalizeMin" data-equalize-min="768" id="ajax-target">
 			<?php if ( have_posts() ): ?>
 			  <?php while ( have_posts() ) : the_post(); ?>
@@ -71,7 +72,7 @@ endif;
 					<?php echo get_next_posts_link( 'Load More') ?>
 				</div>		
 			<?php endif; ?>
-
+			</div>
 		</div>
 	</div>
 </section>

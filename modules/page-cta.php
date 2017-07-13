@@ -28,7 +28,7 @@
 
 
 <div class="cta">
-	<a href="<?php echo $cta['href'] ?>" target="<?php echo $cta['target']; ?>" class="button border-soot color-soot"><?php echo $cta['text']; ?></a>
+	<a href="<?php echo $cta['href'] ?>" target="<?php echo $cta['target']; ?>" class="button"><?php echo $cta['text']; ?></a>
 <?php 
 	if($cta['desc']):	
 ?>
