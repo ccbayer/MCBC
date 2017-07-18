@@ -274,4 +274,20 @@ function getSimilarPosts($post_type, $exclude, $term_list_name, $count = 3, $tax
 	
 	return get_posts( $args );
 }
+
+
+// projects
+function getProjectPage($term) {
+	$args = array(
+	'numberposts'	=> -1,
+	'post_type'		=> 'page',
+	'meta_key'		=> 'selected_project',
+	'meta_value'	=> $term
+	);
+	
+	$post = get_posts( $args );
+	return get_permalink($post[0]->ID);
+	
+}
+
 ?>

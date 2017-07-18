@@ -3,6 +3,16 @@
 $post_type = get_post_type();
 $id = $post->ID;
 $term_list = wp_get_post_terms($post->ID, 'target', array("fields" => "all"));
+$project = wp_get_post_terms($post->ID, 'project', array("fields" => "all"));
+if($project) {
+	$projectInfo = array(
+		'archiveLink' => '<a href="'.get_term_link($project[0]->term_id).'">'.$project[0]->name.'</a>', 
+		'projectPageLink' => getProjectPage($project[0]->term_id),
+		'projectName' => $project[0]->name
+		);
+} else {
+	$projectInfo = false;
+}
 // headline 
 if(get_field('subheading')) {
 	$subheading = get_field('subheading');
@@ -45,6 +55,12 @@ endif;
 						<time datetime="<?php the_time('m-d-Y'); ?> <?php the_time('H:i'); ?>"> Posted on 
 							<?php the_date(); ?>
 						</time>
+						<?php 
+							if($projectInfo){
+								echo '<p><a href="'.$projectInfo['projectPageLink'].'">More about ' . $projectInfo['projectName'] . '</p>';
+							}
+						?>
+
 					</div>
 				</div>
 				<div class="content">
@@ -52,10 +68,17 @@ endif;
 				</div>
 				<div class="post-meta-footer">
 					<time datetime="<?php the_time('Y-m-d'); ?> <?php the_time('H:i'); ?>"> Posted on 
-						<?php the_time('m-d-Y'); ?>
+						<?php echo get_the_date('F j, Y'); ?>
 					</time>
 					<div class="tags">
 						 <?php the_tags(); ?>
+						 <?php 
+							if($projectInfo){
+						?>
+							<p>Project: <?php echo $projectInfo['archiveLink']; ?></p>
+						<?		
+							}
+						?>
 					</div>
 				</div>
 				<?php get_template_part('modules/events', 'list'); ?>
