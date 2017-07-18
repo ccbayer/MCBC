@@ -3,10 +3,10 @@
     "title": "Project Taxonomy",
     "fields": [
         {
-            "key": "field_5953400433559",
-            "label": "Back To Page Link",
-            "name": "back_to_page_link",
-            "type": "page_link",
+            "key": "field_596e53b314156",
+            "label": "Show Back To Project Link",
+            "name": "show_back_to_project_link",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,11 +15,11 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": [],
-            "taxonomy": [],
-            "allow_null": 0,
-            "allow_archives": 1,
-            "multiple": 0
+            "message": "",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
             "key": "field_595340193355a",
@@ -96,5 +96,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1498628575
+    "modified": 1500402632
 }
