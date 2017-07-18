@@ -46,11 +46,15 @@ endif;
 				<div class="text-center">
 					<p><?php echo term_description( $term->term_id, 'project' ); ?>
 				</div>
-				<div class="cta">						
-					<?php if ( get_field('back_to_page_link', $term) && get_field('back_to_page_label',$term) ): ?>
-						<a href="<?php the_field('back_to_page_link', $term); ?>" class="button border-white color-white"><?php the_field('back_to_page_label',$term); ?></a>
-					<?php endif; ?>
+				<?php
+					if(get_field('show_back_to_project_link', $term)): ?>
+				<div class="cta">
+					<?php
+							$label = get_field('back_to_page_label',$term) ? get_field('back_to_page_label',$term) : 'Back To Project Page';
+					?>
+						<a href="<?php echo getProjectPage($term->term_id); ?>" class="button border-white color-white"><?php echo $label ?></a>
 				</div>
+				<?php endif; ?>
 			</div>
 		</div>
 		<div class="row">
