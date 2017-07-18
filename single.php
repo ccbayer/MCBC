@@ -56,7 +56,7 @@ endif;
 							<?php the_date(); ?>
 						</time>
 						<?php 
-							if($project){
+							if($projectInfo){
 								echo '<p><a href="'.$projectInfo['projectPageLink'].'">More about ' . $projectInfo['projectName'] . '</p>';
 							}
 						?>
@@ -73,7 +73,7 @@ endif;
 					<div class="tags">
 						 <?php the_tags(); ?>
 						 <?php 
-							if(has_term('', 'project', $post->ID )){
+							if($projectInfo){
 						?>
 							<p>Project: <?php echo $projectInfo['archiveLink']; ?></p>
 						<?		
