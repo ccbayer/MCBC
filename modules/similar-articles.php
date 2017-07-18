@@ -1,20 +1,29 @@
 <?php
 $post_type = get_post_type();
 $id = $post->ID;
+$isProjectPage = false;
+if(get_page_template_slug() == "page-projects.php"):
+	$isProjectPage = true;
+endif;
 
 // pages don't have terms, so grab the custom one
 if($post_type === 'page'):
-	$term = get_field('related_taxonomy');
-	$term_list = get_term($term, 'target');
+	if($isProjectPage):
+		// get the associated project
+		$term = get_field('selected_project');
+		$term_list = get_term($term, 'project');
+	else:
+		$term = get_field('related_taxonomy');
+		$term_list = get_term($term, 'target');
+	endif;
 else:
 	$term_list = wp_get_post_terms($post->ID, 'target', array("fields" => "all"));
 	// if there are more than one, just pick first
-	$term_list = $term_list[0];
+	$term_list = $term_list[0]; 
 endif;
 
+
 $customType = false;
-
-
 $myposts = get_field('similar_posts');
 	if($myposts):
 		$customType = true;
@@ -29,11 +38,9 @@ $myposts = get_field('similar_posts');
 			$myposts = array_merge($myposts, getSimilarPosts('news', $exclude, $term_list->name, $num));
 		endif;
 	else:
-		// fall back: get similar articles in the same taxonomy.
-		$myposts = getSimilarPosts('news', $id, $term_list->name, 3);
+		$myposts = getSimilarPosts('news', $id, $term_list->name, 3, $term_list->taxonomy);
 	endif;
 
-	
 	if($myposts):
 ?>
 <section class="theme-grey">
@@ -95,14 +102,15 @@ $myposts = get_field('similar_posts');
 			<div class="col-md-4 col-md-offset-4 text-center">
 				<?php 
 					if($term_list) {
-						$see_more_link = get_term_link($term_list->slug, 'target');	
+						$see_more_link = get_term_link($term_list->slug, $term_list->taxonomy);	
 						$see_more_title = $term_list->name;
 					} else {
 						$see_more_link = get_post_type_archive_link('news');
 						$see_more_title = $post_type;			
 					}
+					$see_more_label = get_field('see_more_label') ? get_field('see_more_label') : "See More";
 				?>
-				<a href="<?php echo $see_more_link; ?>" title="View more <?php echo $see_more_title; ?> Articles" class="button border-white color-white">See More</a>
+				<a href="<?php echo $see_more_link; ?>" title="View more <?php echo $see_more_title; ?> Articles" class="button border-white color-white"><?php echo $see_more_label; ?></a>
 			</div>
 		</div>
 	</div>
