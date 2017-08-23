@@ -55,3 +55,18 @@
 		padding: 5px 0;
 	}
 }
+
+// white
+.theme-white {
+	.wpcf7,
+	.modal-content,
+	.wpforms-container {
+		label {
+			color: $soot;
+		}
+		input[type="submit"] {
+			background-color: transparent;
+			color: $soot;
+		}
+	}
+}
