@@ -13,3 +13,34 @@
 		text-align: center;
 	}
 }
+
+// soot
+.theme-soot .cta {
+	.button {
+		border-color: $white;
+		color: $white;
+		&:hover {
+			background: $white;
+			color: $soot;
+		}
+	}
+	.description {
+		color: $white;
+	}
+	
+}
+
+// white
+.theme-white .cta {
+	.button {
+		border-color: $soot;
+		color: $soot;
+		&:hover {
+			background: $soot;
+			color: $white;
+		}
+	}
+	.description {
+		color: $soot;
+	}
+}

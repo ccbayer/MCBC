@@ -257,7 +257,7 @@ function my_ajax_pagination() {
 
 // POSTS
 
-function getSimilarPosts($post_type, $exclude, $term_list_name, $count = 3) {
+function getSimilarPosts($post_type, $exclude, $term_list_name, $count = 3, $tax = 'target') {
 	$args = array(
 		'post_type' => $post_type,
 		'post_status' => 'publish',
@@ -265,7 +265,7 @@ function getSimilarPosts($post_type, $exclude, $term_list_name, $count = 3) {
 		'exclude' => $exclude,
 		'tax_query' => array(
 			array (
-				'taxonomy' => 'target',
+				'taxonomy' => $tax,
 				'field' => 'name',
 				'terms' => $term_list_name
 			)
@@ -274,4 +274,20 @@ function getSimilarPosts($post_type, $exclude, $term_list_name, $count = 3) {
 	
 	return get_posts( $args );
 }
+
+
+// projects
+function getProjectPage($term) {
+	$args = array(
+	'numberposts'	=> -1,
+	'post_type'		=> 'page',
+	'meta_key'		=> 'selected_project',
+	'meta_value'	=> $term
+	);
+	
+	$post = get_posts( $args );
+	return get_permalink($post[0]->ID);
+	
+}
+
 ?>
