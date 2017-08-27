@@ -275,6 +275,47 @@ function getSimilarPosts($post_type, $exclude, $term_list_name, $count = 3, $tax
 	return get_posts( $args );
 }
 
+// responsive image sizes
+
+
+
+/**
+ * Add custom image sizes attribute to enhance responsive image functionality
+ * for content images.
+ *
+ * @param string $sizes A source size value for use in a 'sizes' attribute.
+ * @param array  $size  Image size. Accepts an array of width and height
+ *                      values in pixels (in that order).
+ * @return string A source size value for use in a content image 'sizes' attribute.
+ */
+function mcbc_content_image_sizes_attr( $sizes, $size ) {
+	$width = $size[0];
+
+	if ( 600 <= $width ) {
+		$sizes = '(max-width: 991px) 80vw, (max-width: 1199px) 55vw, 793px';
+	}
+	return $sizes;
+}
+add_filter( 'wp_calculate_image_sizes', 'mcbc_content_image_sizes_attr', 10, 2 );
+
+
+/**
+ * Removes width and height attributes from image tags
+ *
+ * @param string $html
+ *
+ * @return string
+ */
+function remove_image_size_attributes( $html ) {
+    return preg_replace( '/(width|height)="\d*"\s/', "", $html );
+}
+ 
+// Remove image size attributes from post thumbnails
+add_filter( 'post_thumbnail_html', 'remove_image_size_attributes' );
+ 
+// Remove image size attributes from images added to a WordPress post
+add_filter( 'image_send_to_editor', 'remove_image_size_attributes' );
+
 
 // projects
 function getProjectPage($term) {
