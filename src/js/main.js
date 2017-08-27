@@ -207,47 +207,6 @@ $(function() {
 		var data = $(form).serialize();
 	}
 
-	/*
-		$('form.sml_subscribe').validate({
-		rules: {
-			sml_email: {
-				required: true,
-				email: true
-			},
-			sml_name: {
-				required: true
-			}
-		},
-		submitHandler: function(form) {
-			var
-				data = $(form).serialize()
-			;
-
-			$.ajax({
-				type: "POST",
-				url: ajaxsubscribe.url,
-				data: data,
-				success: function(response) {
-					var
-						$output = $('#output')
-					;
-					if(response != "-1") {
-						$output.append('<p>Thank you for subscribing!</p>');
-						$('.sml_nameinput[name="sml_name"]').add('.sml_emailinput[name="sml_email"]').val('');
-					} else {
-						$output.append('<p>Oops! Something went wrong. Try again later.</p>');
-					}
-				}
-			});
-
-			return false;
-		}
-	});
-
-	$('form.sml_subscribe').submit(function(event) {
-		event.preventDefault();
-	});
-	*/
 	if($('form.sml_subscribe').length) {
 		var target = $('.sml_email');
 		var $field = $('<p><label>1 + 5 =</label><input type="text" name="math" id="math"/><input type="hidden" id="math2" value="6"/></p>');
@@ -280,24 +239,6 @@ $(function() {
 		$('#search-modal').modal();
 	});
 
-	// navbar toggle
-	/*
-	$('.navbar-toggle').on('click', function() {
-		var top = $(window).scrollTop();
-		$('.inner-body-wrapper nav').css('top', top);
-		$('.inner-body-wrapper').toggleClass('open');
-		$(this).toggleClass('collapsed');
-	});
-
-
-	$(document).on('click', '.mobile-nav-slide-out .menu li.menu-item a', function() {
-		// close the nav first
-		var $parent = $(this).parent('li.menu-item');
-		if(!$parent.hasClass('menu-item-has-children')) {
-			$('.navbar-toggle').trigger('click');
-		}
-	});
-	*/
 	$(document).on( 'click', '.more-posts', function( event ) {
 		event.preventDefault();
 		var
@@ -338,5 +279,15 @@ $(function() {
 				$('#ajax-target').not('.search').equalize();
 			},
 		});
+	});
+	
+	// RESPONSIVE IMAGES
+	// strip out legacy images that have hard-coded width-height attributes in them.
+	$('article .content img').each(function() {
+		var $this = $(this);
+		
+		$this.removeAttr('width');
+		$this.removeAttr('height');
+		$this.addClass('ready');
 	});
 });
