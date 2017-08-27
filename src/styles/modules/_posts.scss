@@ -47,6 +47,7 @@
 			margin: 10px 0;
 			padding: 10px 0;
 			.tags {
+				color: $soot;
 				margin: 10px 0;
 			}
 		}
@@ -67,6 +68,12 @@
 }
 
 
+.article-wrapper.theme-white {
+	.title h1 small {
+		color: black;
+	}
+}
+
 .similar-articles-wrapper,
 .archive-wrapper {
 	@include max-screen($screen-sm) {
@@ -81,6 +88,9 @@
 		small {
 			display: block;
 			color: white;
+			&.theme-white {
+				color: black;
+			}
 		}
 		a {
 			color: $celeste;
@@ -122,7 +132,7 @@
 	}
 }
 .similar-articles-wrapper {
-	padding: 115px 0;
+	padding: 60px 0;
 	@include max-screen($screen-sm) {
 		padding: 30px 0;
 	}
@@ -138,6 +148,9 @@
 .headline {
 	padding: 60px 0;
 	@include max-screen($screen-md) {
+		padding: 30px 0;
+	}
+	.project-archive-wrapper & {
 		padding: 30px 0;
 	}
 }

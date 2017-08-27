@@ -1,28 +1,8 @@
 <?php 
 /* 
-	Template Name: Page Programs	
+	Template Name: Page Projects	
 */
 
-
-/*	$url = getcwd().'lib/index.php?network=twitter'; 
-
-	$networks = array('twitter','facebook'); 
-	$random = $networks[array_rand($networks)];
-	$postdata = http_build_query(array('network' => $random));	
-	$opts = array('http' =>
-		array(
-    		'method'  => 'GET',
-			'header'  => 'Content-type: application/x-www-form-urlencoded',
-			'content' => $postdata
-		)	
-	);
-
-	$context  = stream_context_create($opts);
-	$result = file_get_contents('index.php?'.$postdata, false, $context);
-	var_dump($result);
-*/
-// require_once 'lib/index.php';
-// $output = getFacebookFeed();
 
 ?>
 <?php get_header(); ?>
@@ -37,7 +17,7 @@ if($hero_image):
 <?php 
 endif;	
 ?>
-<section class="theme-white default-pad article-wrapper">
+<section class="theme-soot default-pad article-wrapper">
 	<div class="container">
 		<div class="row">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -64,8 +44,22 @@ endif;
 		</div>
 	</div>
 </section>
+<?php
+//
+$layouts = count(get_field('layouts'));	
+// check if the flexible content field has rows of data
+if( have_rows('layout') ):
+	$i = 0;			
+	while ( have_rows('layout') ) : the_row();
+		$i ++;
+		$next = $i + 1;
+			$template_name = 'layouts/layout-' . get_row_layout();
+			include(locate_template($template_name . '.php'));				
+	endwhile;
+	
+endif;
+?>
 <?php 
 	get_template_part('modules/similar', 'articles');
-	get_template_part('modules/feed', 'socialmedia'); 
 ?>
 <?php get_footer(); ?>

@@ -1,0 +1,326 @@
+{
+    "key": "group_565fca1a04d5f",
+    "title": "Call To Action",
+    "fields": [
+        {
+            "key": "field_565fca246e893",
+            "label": "Main Call To Action",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Main call to action appears as a white button below copy.  Will only display if the destination is chosen and the call to action label is entered.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_565fca376e894",
+            "label": "Call To Action Label",
+            "name": "call_to_action_text",
+            "type": "text",
+            "instructions": "If left blank, button will not show.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "e.g, \"See More\", \"Click Here\", etc.",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_565fd40bdfb0c",
+            "label": "Open link in new window",
+            "name": "new_window",
+            "type": "true_false",
+            "instructions": "Check if you want users to be taken to this link in a new browser window \/ tab. Most useful for external links or downloadable assets such as PDFs.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_565fcaa845ef1",
+                        "operator": "==",
+                        "value": "external"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_565fcaa845ef1",
+            "label": "Destination Type",
+            "name": "destination_type",
+            "type": "radio",
+            "instructions": "Will this button go to an internal page \/ post \/ image or an external link?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "false": "Select...",
+                "internal": "Internal",
+                "external": "External",
+                "target": "Target",
+                "project": "Project",
+                "eventcategory": "Event Category",
+                "download": "Download"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "Select...",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_565fca416e895",
+            "label": "CTA Internal Destination",
+            "name": "cta_internal",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_565fcaa845ef1",
+                        "operator": "==",
+                        "value": "internal"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [],
+            "taxonomy": [],
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        },
+        {
+            "key": "field_566e3955bacc7",
+            "label": "CTA External Destination",
+            "name": "cta_external_destination",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_565fcaa845ef1",
+                        "operator": "==",
+                        "value": "external"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_56686937b3868",
+            "label": "CTA Target Destination",
+            "name": "cta_target_destination",
+            "type": "taxonomy",
+            "instructions": "Will link to a listing of *all* posts in this target.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_565fcaa845ef1",
+                        "operator": "==",
+                        "value": "target"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "target",
+            "field_type": "select",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "multiple": 0
+        },
+        {
+            "key": "field_56dd19c96c4c1",
+            "label": "CTA Event Category",
+            "name": "cta_event_category",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_565fcaa845ef1",
+                        "operator": "==",
+                        "value": "eventcategory"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "tribe_events_cat",
+            "field_type": "select",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "multiple": 0
+        },
+        {
+            "key": "field_56776c8e3708e",
+            "label": "CTA Download Destination",
+            "name": "cta_download_destination",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_565fcaa845ef1",
+                        "operator": "==",
+                        "value": "download"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "attachment"
+            ],
+            "taxonomy": [],
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        },
+        {
+            "key": "field_59533d8e6dd8f",
+            "label": "CTA Project Destination",
+            "name": "cta_project_destination",
+            "type": "taxonomy",
+            "instructions": "Will link to a listing of *all* posts in this project.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_565fcaa845ef1",
+                        "operator": "==",
+                        "value": "project"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "project",
+            "field_type": "select",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "multiple": 0
+        },
+        {
+            "key": "field_56686d4fbcf85",
+            "label": "Description",
+            "name": "cta_description",
+            "type": "textarea",
+            "instructions": "Appears below the CTA button.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "wpautop",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "page-home.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1498627708
+}

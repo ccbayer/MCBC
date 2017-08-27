@@ -29,7 +29,7 @@
 <?php 
 	endif;	
 ?>
-<section class="theme-soot default-pad article-wrapper">
+<section class="theme-white default-pad article-wrapper">
 	<div class="container">
 		<div class="row">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
