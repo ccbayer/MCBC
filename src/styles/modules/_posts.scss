@@ -37,6 +37,13 @@
 					}
 				}
 			}
+			img {
+				opacity: 0;
+				transition: opacity .5s ease-in-out;
+				&.ready {
+					opacity: 1;
+				}
+			}
 		}
 		
 		.post-meta-footer {
@@ -67,12 +74,6 @@
 	}
 }
 
-
-.article-wrapper.theme-white {
-	.title h1 small {
-		color: black;
-	}
-}
 
 .similar-articles-wrapper,
 .archive-wrapper {
@@ -165,6 +166,19 @@ ul.term-link {
 		display: inline-block;
 		margin: 0 5px;
 	}	
+}
+
+// white theme on articles
+
+
+// white theme
+.article-wrapper.theme-white {
+	.title h1 {
+		color: $midgrey;		
+		small {
+			color: $soot;
+		}
+	}
 }
 
 // BIOS on contact page
