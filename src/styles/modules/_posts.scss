@@ -75,12 +75,6 @@
 }
 
 
-.article-wrapper.theme-white {
-	.title h1 small {
-		color: black;
-	}
-}
-
 .similar-articles-wrapper,
 .archive-wrapper {
 	@include max-screen($screen-sm) {
@@ -172,6 +166,19 @@ ul.term-link {
 		display: inline-block;
 		margin: 0 5px;
 	}	
+}
+
+// white theme on articles
+
+
+// white theme
+.article-wrapper.theme-white {
+	.title h1 {
+		color: $midgrey;		
+		small {
+			color: $soot;
+		}
+	}
 }
 
 // BIOS on contact page
