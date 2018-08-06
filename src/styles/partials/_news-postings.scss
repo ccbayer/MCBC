@@ -1,0 +1,115 @@
+%subheading {
+    color: $midgrey;
+    font-family: 'Arvo', serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+%title {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  color: $darkteal;
+  font-size: 27px;
+}
+
+%lede {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  color: $black;
+}
+
+%body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  color: $black;
+}
+
+%subhead-1  {
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  color: $darkteal;
+  font-size: 20px;
+}
+
+%subhead-2  {
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  color: $lightgrey;
+  font-size: 18px;
+}
+
+%pull-quote {
+  padding: 15px 0;
+  margin: 30px 0;
+  text-align: center;  
+  color: $midgrey;
+  font-family: 'Arvo', serif;
+  font-size: 18px;
+  font-weight: bold;
+  &:before,
+  &:after {
+    margin: 15px auto;
+    display: block;
+    content: " ---------- ";    
+  }
+}
+
+%caption {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  color: $darkgrey;
+  font-size: 11px;
+}
+
+.mce-content-body,
+body.single .article-wrapper article {
+  h1,
+  h1.title-item,
+  .title h1 {
+    @extend %title;
+    small {
+      @extend %subheading;
+    }
+  }
+  
+  h2.subheading,
+  .subheading {
+    @extend %subheading;
+  }
+
+  h3.subhead-1,
+  .subhead-1{
+    @extend %subhead-1;
+  }
+
+  h4.subhead-2,
+  .subhead-2 {
+    @extend %subhead-2;
+  }
+
+  .pull-quote {
+    @extend %pull-quote;
+  }
+
+  .caption {
+    @extend %caption;
+  }
+  
+  p,
+  p.body {
+    @extend %body;
+  }
+  
+  p.lede,
+  .lede {
+    @extend %lede;
+  }
+  
+  
+  
+}
