@@ -22,7 +22,7 @@
 
 %body {
   font-family: 'Raleway', sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   color: $black;
 }
 
@@ -52,9 +52,16 @@
   font-weight: bold;
   &:before,
   &:after {
+    content: "";
     margin: 15px auto;
-    display: block;
-    content: " ---------- ";    
+    display: block;    
+    width: 70px;
+  }
+  &:before {
+    border-top: 2px solid $lightgrey;
+  }
+  &:after {
+    border-bottom: 2px solid $lightgrey;
   }
 }
 
