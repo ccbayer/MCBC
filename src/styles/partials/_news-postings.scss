@@ -81,7 +81,9 @@
 }
 
 .mce-content-body,
-body.single .article-wrapper article {
+body.single .article-wrapper article,
+body.page-template-default article.single-page,
+body.page-template .page-content {
   h1,
   h1.title-item,
   .title h1 {
@@ -123,7 +125,4 @@ body.single .article-wrapper article {
   .lede {
     @extend %lede;
   }
-  
-  
-  
 }
